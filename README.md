@@ -1,4 +1,5 @@
 # phene.dev
 Open-source fork of [phene.dev](https://phene.dev).
 
-Some segments were not uploaded, like the [wiki](https://wiki.phene.dev). This is because those components require setup by yourself.
+Scores an almost perfect score in Lighthouse
+![Scores an almost perfect score in Lighthouse](https://cdn.phene.dev/chrome_WMV5xf5q4I.png)
