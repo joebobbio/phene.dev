@@ -8,6 +8,20 @@ body {
   background-repeat: no-repeat;
   color: white;
 }
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Noto Sans'), local('Noto-Sans'), url(https://fonts.gstatic.com/s/notosans/v21/o-0IIpQlx3QUlC5A4PNr5TRASf6M7Q.woff2) format('woff2');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'FontAwesome';
+  font-style: normal;
+  font-weight: 400;
+  src: local('FontAwesome'), local('Font-Awesome'), url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0) format('woff2');
+  font-display: swap;
+}
 /* I'm not sure if this actually does anything, but I think the gradient looks better on mobile with this */
 @media only screen and (max-width: 767px) {
   body {

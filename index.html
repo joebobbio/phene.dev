@@ -15,8 +15,10 @@
 	<title>phene official site</title>
 	<link href="/cdn/media/img/phene.png" rel="icon" type="image/png" >
     <link href="css/main.css" rel="stylesheet" type="text/css" />
-    <link href="https://fonts.googleapis.com/css?family=Noto Sans&swap" rel="stylesheet" />
-	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link rel="preload" as="font" href="https://fonts.googleapis.com/css?family=Noto Sans&swap" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link href="https://fonts.googleapis.com/css?family=Noto Sans&swap" rel="stylesheet"></noscript>
+	<link rel="preload" as="font" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" /></noscript>
     <script>
         /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
 function myFunction() {
@@ -47,7 +49,7 @@ function myFunction() {
                 <p>Feel free to send feedback (or just say hi!) with the contact link above.</p>
                 <footer>
                         <div class="privacy">
-                            <a href="privacy/">Privacy Policy</a>
+                            <a href="privacy/">Privacy Policy</a> - <a href="https://github.com/joebobbio/phene.dev">Open Source</a>
                     </div>
                 </footer>
             </div>
