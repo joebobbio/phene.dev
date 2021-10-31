@@ -1,12 +1,17 @@
 /* Things put here will apply globally unless overidden later in this document */
 body {
-  text-align: center;
   font-family: 'Noto Sans', Times, serif;
-  background-image:linear-gradient(to bottom right, #12d5df, #f412fe);
-  background-position: center center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  color: white;
+    background-color: #2c2f33;
+    color: black;
+    transition: background-color .3s;
+    text-align: center;
+}
+body[light-mode=light] {
+  background-color: white;
+  color: black;
+}
+.main[light-mode=light] {
+  color: black;
 }
 @font-face {
   font-family: 'Noto Sans';
@@ -22,16 +27,8 @@ body {
   src: local('FontAwesome'), local('Font-Awesome'), url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0) format('woff2');
   font-display: swap;
 }
-/* I'm not sure if this actually does anything, but I think the gradient looks better on mobile with this */
-@media only screen and (max-width: 767px) {
-  body {
-      background-image:linear-gradient(to bottom right, #12d5df, #f412fe);
-  }
-}
-/* Center the "main" div */
-.main{
-text-align: center;
-}
+
+
 
 /* Properties for the things that fade in */
 #animated_div {
@@ -41,10 +38,12 @@ animation:animated_div 3s;
 -webkit-animation:animated_div 3s;
 -o-animation:animated_div 3s;
 }
-/* Hide link underlines and make them the same colour as the rest of the text */
-a {
-    color: white;
-    text-decoration: none;
+#animated_div[light-mode=light]{
+  color: green;
+animation:animated_div 3s;
+-moz-animation:animated_div 3s;
+-webkit-animation:animated_div 3s;
+-o-animation:animated_div 3s;
 }
 /* Keyframes for fade in animation */
 @keyframes animated_div
@@ -71,7 +70,7 @@ a {
         100% {opacity: 1;}
         }
 
-      /* Add a black background color to the top navigation */
+      /* Prevent scrollign */
       .topnav {
         overflow: hidden;
       }
@@ -86,15 +85,30 @@ a {
         text-decoration: none;
         font-size: 17px;
       }
+      .topnav a[light-mode=light] {
+        float: left;
+        display: block;
+        color: green;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+      }
       
       /* Change the color of links on hover */
       .topnav a:hover {
         color:white
       }
+      .topnav a:hover[light-mode=light] {
+        color: green;
+      }
       
       /* Add an active class to highlight the current page */
       .topnav a.active {
         color: white;
+      }
+      .topnav a.active[light-mode=light]{
+        color: green;
       }
       
       /* Hide the link that should open and close the topnav on small screens */

@@ -18,6 +18,7 @@
     <noscript><link href="https://fonts.googleapis.com/css?family=Noto Sans&swap" rel="stylesheet"></noscript>
 	  <link rel="preload" as="font" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" onload="this.onload=null;this.rel='stylesheet'" />
     <noscript><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" /></noscript>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
         /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
 function myFunction() {
@@ -29,26 +30,84 @@ function myFunction() {
   }
 }
     </script>
+    <style>
+      a {
+          color: green;
+          text-decoration: none;
+      }
+  </style>
 </head>
-<body>
+<body light-mode="light">
     <div id="animated_div">
         <div class="topnav" id="myTopnav">
             <a href="../">Home</a>
             <a href="mailto:phene@phene.dev">Contact</a>
             <a href="./" class="active">About</a>
             <a href="https://webmail.phene.dev">Webmail</a>
+            <a href="https://github.com/joebobbio/phene.dev">Open Source</a>
             <a href="javascript:void(0);" class="icon" aria-label="Expand or collapse menu" onclick="myFunction()">
               <i class="fa fa-bars"></i>
             </a>
         </div>
-            <div class="main">
                 <h1>Coming soon!</h1>
                 <footer>
                         <div class="privacy">
-                            <a href="../privacy/">Privacy Policy</a>
+                            <a href="../privacy/">Privacy Policy</a> - <a id="theToggle" aria-label="Toggle light mode" onclick="toggle_light_mode()" href="#" style="cursor:pointer">Toggle dark mode</a>
                     </div>
                 </footer>
-            </div>
     </div>
+    <script>
+      var app = document.getElementsByTagName("BODY")[0];
+      if (localStorage.lightMode == "dark") {
+          app.setAttribute("light-mode", "dark");
+      }
+  </script>
+      <script>
+          window.addEventListener('load', function () {
+              if(localStorage.lightMode == "light") {
+              $('a').css('color', 'green');
+              $('h1').css('color', 'black');
+              $('p').css('color', 'black');
+          } else if(localStorage.lightMode == "dark") {
+              $('a').css('color', 'white');
+              $('h1').css('color', 'white');
+              $('p').css('color', 'white');
+              document.getElementById("theToggle").innerHTML = "Toggle light mode"
+              document.getElementById("theToggle").ariaLabel = "Toggle light mode"
+          }
+          })   
+      </script>
+  <script>
+  
+      function toggle_light_mode() {
+          var app = document.getElementsByTagName("BODY")[0];
+          if (localStorage.lightMode == "dark") {
+              localStorage.lightMode = "light";
+              app.setAttribute("light-mode", "light");
+              $('a').css('color', 'green');
+              $('h1').css('color', 'black');
+              $('p').css('color', 'black');
+              document.getElementById("theToggle").innerHTML = "Toggle dark mode"
+              document.getElementById("theToggle").ariaLabel = "Toggle dark mode"
+          } else {
+              localStorage.lightMode = "dark";
+              app.setAttribute("light-mode", "dark");
+              $('a').css('color', 'white');
+              $('h1').css('color', 'white');
+              $('p').css('color', 'white');
+              document.getElementById("theToggle").innerHTML = "Toggle light mode"
+              document.getElementById("theToggle").ariaLabel = "Toggle light mode"
+          }       
+      }
+
+  window.addEventListener("storage", function () {
+    if (localStorage.lightMode == "dark") {
+      app.setAttribute("light-mode", "dark");
+    } else {
+      app.setAttribute("light-mode", "light");
+    }
+  }, false);
+  
+  </script>
 </body>
 </html>
