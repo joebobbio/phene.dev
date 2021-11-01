@@ -78,6 +78,10 @@ function myFunction() {
                 $('p').css('color', 'white');
                 document.getElementById("theToggle").innerHTML = "Toggle light mode"
                 document.getElementById("theToggle").ariaLabel = "Toggle light mode"
+            } else if(localStorage.lightMode == undefined) {
+                $('a').css('color', 'green');
+                $('h1').css('color', 'black');
+                $('p').css('color', 'black'); 
             }
             })   
         </script>
