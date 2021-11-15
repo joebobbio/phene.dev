@@ -50,10 +50,10 @@ function myFunction() {
               <i class="fa fa-bars"></i>
             </a>
         </div>
-                <h1>Hey!</h1>
-                <p>Welcome to my new page. This is still a work in progress, so expect some bugs and things to change.</p>
-                <p>I'm excited to finish this and have a beautiful site that I can brag to everyone about.</p>
-                <p>Feel free to send feedback (or just say hi!) with the contact link above.</p>
+                <h1>Phene</h1>
+                <h2>Developer, cat lover, community manager.</h2>
+                <br>
+                <button id="reallycoolbutton" class="button" onclick="window.location.replace('about/')"><span>more</span></button>
                 <footer>
                         <div class="privacy">
                             <a href="privacy/">Privacy Policy</a> - <a id="theToggle" aria-label="Toggle light mode" onclick="toggle_light_mode()" href="#" style="cursor:pointer">Toggle dark mode</a>
@@ -71,17 +71,17 @@ function myFunction() {
                 if(localStorage.lightMode == "light") {
                 $('a').css('color', 'green');
                 $('h1').css('color', 'black');
-                $('p').css('color', 'black');
+                $('h2').css('color', 'black');
             } else if(localStorage.lightMode == "dark") {
                 $('a').css('color', 'white');
                 $('h1').css('color', 'white');
-                $('p').css('color', 'white');
+                $('h1').css('color', 'white')
                 document.getElementById("theToggle").innerHTML = "Toggle light mode"
                 document.getElementById("theToggle").ariaLabel = "Toggle light mode"
             } else if(localStorage.lightMode == undefined) {
                 $('a').css('color', 'green');
                 $('h1').css('color', 'black');
-                $('p').css('color', 'black'); 
+                $('h2').css('color', 'black'); 
             }
             })   
         </script>
@@ -94,7 +94,7 @@ function myFunction() {
                 app.setAttribute("light-mode", "light");
                 $('a').css('color', 'green');
                 $('h1').css('color', 'black');
-                $('p').css('color', 'black');
+                $('h2').css('color', 'black');
                 document.getElementById("theToggle").innerHTML = "Toggle dark mode"
                 document.getElementById("theToggle").ariaLabel = "Toggle dark mode"
             } else {
@@ -102,7 +102,7 @@ function myFunction() {
                 app.setAttribute("light-mode", "dark");
                 $('a').css('color', 'white');
                 $('h1').css('color', 'white');
-                $('p').css('color', 'white');
+                $('h2').css('color', 'white');
                 document.getElementById("theToggle").innerHTML = "Toggle light mode"
                 document.getElementById("theToggle").ariaLabel = "Toggle light mode"
             }       

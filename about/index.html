@@ -49,7 +49,28 @@ function myFunction() {
               <i class="fa fa-bars"></i>
             </a>
         </div>
-                <h1>Coming soon!</h1>
+        <div class="yaycontent">
+                <h1>Hey, I'm Phene.</h1>
+                <h3><span style="cursor:pointer" onclick="var aboutscroll = document.querySelector('a.aboutme');aboutscroll.scrollIntoView({ behavior: 'smooth' });">about me</span> - <span style="cursor:pointer" onclick="var missionscroll = document.querySelector('a.mission');missionscroll.scrollIntoView({ behavior: 'smooth' });">my mission</span> - <span style="cursor:pointer" onclick="var workscroll = document.querySelector('a.work');workscroll.scrollIntoView({ behavior: 'smooth' });">my work</span> - <span style="cursor:pointer" onclick="var contribscroll = document.querySelector('a.contrib');contribscroll.scrollIntoView({ behavior: 'smooth' });">contributions</span></h3>
+                <h2><a class="aboutme"></a>about me</h2>
+                <p>I'm a young trans developer who wants to make the world better with her code.</p>
+                <p>I own two cats (do ask for pictures!), and I have a maybe-not-so-mild Dr. Pepper addiciton.</p>
+                <p>I am more of a hardware person than a software one, but I am unfortunately still a student and money is short.</p>
+                <p>In my spare time, I am often found helping others out in support forums and managing communities. Below are examples of a few places I frequent:</p>
+                <button class="button" onclick="window.location.replace('https\://discord.gg/chromeos')"><span>r/ChromeOS Discord</span></button>
+                <button class="button" onclick="window.location.replace('https\://discord.gg/hwHYTWp')"><span>Brunch community</span></button>
+                <button class="button" onclick="window.location.replace('https\://discord.com/invite/jQCpfVK')"><span>WoR community</span></button>
+                <p>Pronouns: she/they/xe/xir</p>
+                <h2><a class="mission"></a>my mission</h2>
+                <p>My mission is to make simple to use experiences that anyone can use easily and efficiently.</p>
+                <p>If you're on a phone, tablet, or desktop, if you're disabled or just not good with technology, my experiences will work for you, not against you.</p>
+                <p>No more digging through hundreds of settings pages - all of your settings are on an indexed, searchable page.</p>
+                <h2><a class="work"></a>my work</h2>
+                <i><p>There's nothing here....yet...👻</p></i>
+                <h2><a class="contrib"></a>my contributions</h2>
+                <button class="button" onclick="window.location.replace('https\://github.com/Amog-OS/AmogOS')"><span>AmogOS</span></button>
+                
+              </div>
                 <footer>
                         <div class="privacy">
                             <a href="../privacy/">Privacy Policy</a> - <a id="theToggle" aria-label="Toggle light mode" onclick="toggle_light_mode()" href="#" style="cursor:pointer">Toggle dark mode</a>
@@ -67,10 +88,14 @@ function myFunction() {
               if(localStorage.lightMode == "light") {
               $('a').css('color', 'green');
               $('h1').css('color', 'black');
+              $('h3').css('color', 'black');
+              $('h2').css('color', 'black');
               $('p').css('color', 'black');
           } else if(localStorage.lightMode == "dark") {
               $('a').css('color', 'white');
               $('h1').css('color', 'white');
+              $('h3').css('color', 'white');
+              $('h2').css('color', 'white');
               $('p').css('color', 'white');
               document.getElementById("theToggle").innerHTML = "Toggle light mode"
               document.getElementById("theToggle").ariaLabel = "Toggle light mode"
@@ -86,6 +111,8 @@ function myFunction() {
               app.setAttribute("light-mode", "light");
               $('a').css('color', 'green');
               $('h1').css('color', 'black');
+              $('h3').css('color', 'black');
+              $('h2').css('color', 'black');
               $('p').css('color', 'black');
               document.getElementById("theToggle").innerHTML = "Toggle dark mode"
               document.getElementById("theToggle").ariaLabel = "Toggle dark mode"
@@ -94,6 +121,8 @@ function myFunction() {
               app.setAttribute("light-mode", "dark");
               $('a').css('color', 'white');
               $('h1').css('color', 'white');
+              $('h3').css('color', 'white');
+              $('h2').css('color', 'white');
               $('p').css('color', 'white');
               document.getElementById("theToggle").innerHTML = "Toggle light mode"
               document.getElementById("theToggle").ariaLabel = "Toggle light mode"
