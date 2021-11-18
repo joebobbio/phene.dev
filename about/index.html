@@ -64,7 +64,7 @@ function myFunction() {
                 <h2><a class="mission"></a>my mission</h2>
                 <p>My mission is to make simple to use experiences that anyone can use easily and efficiently.</p>
                 <p>If you're on a phone, tablet, or desktop, if you're disabled or just not good with technology, my experiences will work for you, not against you.</p>
-                <p>No more digging through hundreds of settings pages - all of your settings are on an indexed, searchable page.</p>
+                <p>I also strive to make my experiences compact and fast. This page only uses 145 KiB of data and loads in 309 ms!</p>
                 <h2><a class="work"></a>my work</h2>
                 <i><p>There's nothing here....yet...👻</p></i>
                 <h2><a class="contrib"></a>my contributions</h2>
@@ -99,7 +99,13 @@ function myFunction() {
               $('p').css('color', 'white');
               document.getElementById("theToggle").innerHTML = "Toggle light mode"
               document.getElementById("theToggle").ariaLabel = "Toggle light mode"
-          }
+          } else if(localStorage.lightMode == undefined) {
+              $('a').css('color', 'green');
+              $('h1').css('color', 'black');
+              $('h3').css('color', 'black');
+              $('h2').css('color', 'black');
+              $('p').css('color', 'black'); 
+            }
           })   
       </script>
   <script>
