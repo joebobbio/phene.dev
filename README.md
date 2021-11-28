@@ -1,4 +1,1 @@
-# phene.dev
-Open-source fork of [phene.dev](https://phene.dev).
-
-Lightweight, beautiful, fast, and responsive.
+## Everything in this branch isn't minified so it's easier to edit.
