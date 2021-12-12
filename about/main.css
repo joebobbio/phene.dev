@@ -39,43 +39,10 @@ body[light-mode=light] {
 /* Properties for the things that fade in */
 #animated_div {
 color: #ffffff;
-animation:animated_div 3s;
--moz-animation:animated_div 3s;
--webkit-animation:animated_div 3s;
--o-animation:animated_div 3s;
 }
 #animated_div[light-mode=light]{
   color: green;
-animation:animated_div 3s;
--moz-animation:animated_div 3s;
--webkit-animation:animated_div 3s;
--o-animation:animated_div 3s;
 }
-/* Keyframes for fade in animation */
-@keyframes animated_div
-    {
-    0% {opacity: 0;}
-    100% {opacity: 1;}
-    }
-    
-    @-webkit-keyframes animated_div
-    {
-      0% {opacity: 0;}
-      100% {opacity: 1;}
-      }
-    
-    @-moz-keyframes animated_div
-    {
-      0% {opacity: 0;}
-      100% {opacity: 1;}
-      }
-    
-    @-o-keyframes animated_div
-      {
-        0% {opacity: 0;}
-        100% {opacity: 1;}
-        }
-
       /* Prevent scrollign */
       .topnav {
         overflow: hidden;
