@@ -9,13 +9,15 @@
 <meta name="mobile-web-app-capable" content="yes" />
 <meta name="description" content="About Phene">
 <meta content="phene official site" property="og:site_name">
-<meta property="og:image" content="https://cdn.discordapp.com/attachments/765758694297436260/779589850025426954/favicon.png">
+<meta property="og:image" content="../icons/icon-512x512.png">
 <meta name="theme-color" content="#12d5df">
 	<title>phene official site</title>
-	<link href="/cdn/media/img/phene.png" rel="icon" type="image/png" >
+	<link href="../icons/favicon-32x32.png" rel="icon" type="image/png" >
     <link href="main.css" rel="stylesheet" type="text/css" />
-    <link rel="preload" as="font" href="https://fonts.googleapis.com/css?family=Noto Sans&swap" onload="this.onload=null;this.rel='stylesheet'" />
-    <noscript><link href="https://fonts.googleapis.com/css?family=Noto Sans&swap" rel="stylesheet"></noscript>
+    <link rel="preload" as="font" href="https://fonts.googleapis.com/css2?family=Poppins&swap" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&swap" rel="stylesheet">
+</noscript>
 	  <link rel="preload" as="font" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" onload="this.onload=null;this.rel='stylesheet'" />
     <noscript><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" /></noscript>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -37,13 +39,12 @@ function myFunction() {
       }
   </style>
 </head>
-<body light-mode="light">
+<body light-mode="dark">
     <div id="animated_div">
         <div class="topnav" id="myTopnav">
             <a href="../">Home</a>
             <a href="mailto:phene@phene.dev">Contact</a>
             <a href="./" class="active">About</a>
-            <a href="https://webmail.phene.dev">Webmail</a>
             <a href="https://github.com/joebobbio/phene.dev">Open Source</a>
             <a href="javascript:void(0);" class="icon" aria-label="Expand or collapse menu" onclick="myFunction()">
               <i class="fa fa-bars"></i>
@@ -59,28 +60,26 @@ function myFunction() {
                 <p>In my spare time, I am often found helping others out in support forums and managing communities. Below are examples of a few places I frequent:</p>
                 <button class="button" onclick="window.location.replace('https\://discord.gg/chromeos')"><span>r/ChromeOS Discord</span></button>
                 <button class="button" onclick="window.location.replace('https\://discord.gg/hwHYTWp')"><span>Brunch community</span></button>
-                <button class="button" onclick="window.location.replace('https\://discord.com/invite/jQCpfVK')"><span>WoR community</span></button>
                 <p>Pronouns: she/they/xe/xir</p>
                 <h2><a class="mission"></a>my mission</h2>
                 <p>My mission is to make simple to use experiences that anyone can use easily and efficiently.</p>
                 <p>If you're on a phone, tablet, or desktop, if you're disabled or just not good with technology, my experiences will work for you, not against you.</p>
-                <p>I also strive to make my experiences compact and fast. This page only uses 145 KiB of data and loads in 309 ms!</p>
+                <p>I also strive to make my experiences compact and fast.</p>
                 <h2><a class="work"></a>my work</h2>
                 <i><p>There's nothing here....yet...👻</p></i>
                 <h2><a class="contrib"></a>my contributions</h2>
-                <button class="button" onclick="window.location.replace('https\://github.com/Amog-OS/AmogOS')"><span>AmogOS</span></button>
-                
+                <p>We don't talk about what used to be here.</p>                
               </div>
                 <footer>
                         <div class="privacy">
-                            <a href="../privacy/">Privacy Policy</a> - <a id="theToggle" aria-label="Toggle light mode" onclick="toggle_light_mode()" href="#" style="cursor:pointer">Toggle dark mode</a>
+                            <a href="../privacy/">Privacy Policy</a> - <a id="theToggle" aria-label="Toggle light mode" onclick="toggle_light_mode()" href="#" style="cursor:pointer">Toggle light mode</a>
                     </div>
                 </footer>
     </div>
     <script>
       var app = document.getElementsByTagName("BODY")[0];
-      if (localStorage.lightMode == "dark") {
-          app.setAttribute("light-mode", "dark");
+      if (localStorage.lightMode == "light") {
+          app.setAttribute("light-mode", "light");
       }
   </script>
       <script>
@@ -91,20 +90,20 @@ function myFunction() {
               $('h3').css('color', 'black');
               $('h2').css('color', 'black');
               $('p').css('color', 'black');
+              document.getElementById("theToggle").innerHTML = "Toggle dark mode"
+              document.getElementById("theToggle").ariaLabel = "Toggle dark mode"
           } else if(localStorage.lightMode == "dark") {
               $('a').css('color', 'white');
               $('h1').css('color', 'white');
               $('h3').css('color', 'white');
               $('h2').css('color', 'white');
               $('p').css('color', 'white');
-              document.getElementById("theToggle").innerHTML = "Toggle light mode"
-              document.getElementById("theToggle").ariaLabel = "Toggle light mode"
           } else if(localStorage.lightMode == undefined) {
-              $('a').css('color', 'green');
-              $('h1').css('color', 'black');
-              $('h3').css('color', 'black');
-              $('h2').css('color', 'black');
-              $('p').css('color', 'black'); 
+            $('a').css('color', 'white');
+              $('h1').css('color', 'white');
+              $('h3').css('color', 'white');
+              $('h2').css('color', 'white');
+              $('p').css('color', 'white');
             }
           })   
       </script>
@@ -112,17 +111,7 @@ function myFunction() {
   
       function toggle_light_mode() {
           var app = document.getElementsByTagName("BODY")[0];
-          if (localStorage.lightMode == "dark") {
-              localStorage.lightMode = "light";
-              app.setAttribute("light-mode", "light");
-              $('a').css('color', 'green');
-              $('h1').css('color', 'black');
-              $('h3').css('color', 'black');
-              $('h2').css('color', 'black');
-              $('p').css('color', 'black');
-              document.getElementById("theToggle").innerHTML = "Toggle dark mode"
-              document.getElementById("theToggle").ariaLabel = "Toggle dark mode"
-          } else {
+          if (localStorage.lightMode == "light") {
               localStorage.lightMode = "dark";
               app.setAttribute("light-mode", "dark");
               $('a').css('color', 'white');
@@ -132,6 +121,16 @@ function myFunction() {
               $('p').css('color', 'white');
               document.getElementById("theToggle").innerHTML = "Toggle light mode"
               document.getElementById("theToggle").ariaLabel = "Toggle light mode"
+          } else {
+              localStorage.lightMode = "light";
+              app.setAttribute("light-mode", "light");
+              $('a').css('color', 'green');
+              $('h1').css('color', 'black');
+              $('h3').css('color', 'black');
+              $('h2').css('color', 'black');
+              $('p').css('color', 'black');
+              document.getElementById("theToggle").innerHTML = "Toggle dark mode"
+              document.getElementById("theToggle").ariaLabel = "Toggle dark mode"
           }       
       }
 

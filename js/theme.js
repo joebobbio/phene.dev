@@ -15,18 +15,18 @@ window.addEventListener('load',function(){
 })
 function toggle_light_mode(){
     var app = document.getElementsByTagName("BODY")[0]
-    if (localStorage.lightMode == "dark"){
-        localStorage.lightMode = "light"
-        app.setAttribute("light-mode", "light");
-        [...document.getElementsByTagName('a'),...document.getElementsByTagName('h1'),...document.getElementsByTagName('h2')].forEach(e => e.style.color = e.tagName[1] ? 'black' : 'green')
-        document.getElementById("theToggle").innerHTML = "Toggle dark mode"
-        document.getElementById("theToggle").ariaLabel = "Toggle dark mode"
-    }else{
+    if (localStorage.lightMode == "light"){
         localStorage.lightMode = "dark"
         app.setAttribute("light-mode", "dark");
         [...document.getElementsByTagName('a'),...document.getElementsByTagName('h1'),...document.getElementsByTagName('h2')].forEach(e => e.style.color = 'white')
         document.getElementById("theToggle").innerHTML = "Toggle light mode"
         document.getElementById("theToggle").ariaLabel = "Toggle light mode"
+    }else{
+        localStorage.lightMode = "light"
+        app.setAttribute("light-mode", "light");
+        [...document.getElementsByTagName('a'),...document.getElementsByTagName('h1'),...document.getElementsByTagName('h2')].forEach(e => e.style.color = e.tagName[1] ? 'black' : 'green')
+        document.getElementById("theToggle").innerHTML = "Toggle dark mode"
+        document.getElementById("theToggle").ariaLabel = "Toggle dark mode"
     }
 }
 window.addEventListener("storage",function(){
@@ -37,3 +37,4 @@ window.addEventListener("storage",function(){
         app.setAttribute("light-mode", "light")
     }
 }, false)
+//
