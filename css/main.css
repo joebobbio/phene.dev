@@ -4,7 +4,13 @@ body{
     color:black;
     transition:background-color .3s;
     text-align:center;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
+body::-webkit-scrollbar{
+    display:none;
+  }
+  
 body[light-mode=light]{
     background-color:white;
     color:black;
@@ -104,7 +110,7 @@ body[light-mode=light]{
 .button{
     display:inline-block;
     border-radius:100px;
-    background-color:#dd26d7;
+    background-color:rgba(255, 192, 203, 0.922);
     border:none;
     color:#FFFFFF;
     text-align:center;
@@ -141,3 +147,14 @@ body[light-mode=light]{
     opacity:1;
     right:0;
 }
+/* Aligns the privacy policy link */
+.privacy.responsive{
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    position: relative;
+    bottom: 1%;
+    right: 0;
+    left: 0;
+    }
+    
