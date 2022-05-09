@@ -110,7 +110,7 @@ body[light-mode=light]{
 .button{
     display:inline-block;
     border-radius:100px;
-    background-color:rgba(255, 192, 203, 0.922);
+    background-color:rgba(255, 192, 203, 0.874);
     border:none;
     color:#FFFFFF;
     text-align:center;
