@@ -41,7 +41,7 @@ body[light-mode=light] {
 color: #ffffff;
 }
 #animated_div[light-mode=light]{
-  color: green;
+  color: purple;
 }
       /* Prevent scrollign */
       .topnav {
@@ -61,7 +61,7 @@ color: #ffffff;
       .topnav a[light-mode=light] {
         float: left;
         display: block;
-        color: green;
+        color: purple;
         text-align: center;
         padding: 14px 16px;
         text-decoration: none;
@@ -73,7 +73,7 @@ color: #ffffff;
         color:white
       }
       .topnav a:hover[light-mode=light] {
-        color: green;
+        color: purple;
       }
       
       /* Add an active class to highlight the current page */
@@ -81,7 +81,7 @@ color: #ffffff;
         color: white;
       }
       .topnav a.active[light-mode=light]{
-        color: green;
+        color: purple;
       }
       
       /* Hide the link that should open and close the topnav on small screens */
