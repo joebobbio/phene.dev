@@ -116,14 +116,14 @@ body[light-mode=light]{
     text-align:center;
     font-size:24px;
     padding:20px;
-    width:15%;
+    width:18%;
     transition:all 0.5s;
     cursor:pointer;
     margin:5px;
 }
 @media screen and (max-width:600px){
     .button{
-        width:32%
+        width:50%
     }
 }
 .button span{
