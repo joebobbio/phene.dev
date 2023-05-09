@@ -112,7 +112,7 @@ color: #ffffff;
         }
       }
 /* Aligns the privacy policy link */
-.privacy{
+/* .privacy{
 text-align: center;
 text-decoration: none;
 font-size: 14px;
@@ -120,7 +120,7 @@ position: relative;
 bottom: 1%;
 right: 0;
 left: 0;
-}
+} */
 
 .button {
   display: inline-block;
